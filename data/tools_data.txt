@@ -1,0 +1,32 @@
+NEIGHBOURHOOD TOOL-LENDING SYSTEM
+=================================
+
+Record Number: 1
+Tool ID: 111
+Tool Name: screw
+Category: simple machine
+Tool Type: Hand Tool
+---------------------------------
+
+Record Number: 2
+Tool ID: 45
+Tool Name: Hammer
+Category: striking tool
+Tool Type: Hand Tool
+---------------------------------
+
+Record Number: 3
+Tool ID: 12
+Tool Name: drilling machine
+Category: machine tool 
+Tool Type: Power Tool
+---------------------------------
+
+Record Number: 4
+Tool ID: 2
+Tool Name: axe
+Category: cutting
+Tool Type: Hand Tool
+---------------------------------
+
+Total Records: 4
