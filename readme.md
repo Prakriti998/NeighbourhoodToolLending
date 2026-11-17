@@ -179,6 +179,3 @@ Submission files follow the naming rule `<RollNo>_CAP455_<Phase>_<Title>`, e.g. 
 
 ---
 
-## 10. Academic Integrity
-
-This is individual work. Any books, online documentation or AI tools used for learning and clarification are disclosed in the project report. I can explain and modify every line of the submitted code.
