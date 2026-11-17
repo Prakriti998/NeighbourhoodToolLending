@@ -2,7 +2,7 @@
 
 **Course:** CAP455 – Object-Oriented Programming using C++ (MCA, Session 2026–27)
 **Student:** Prakriti | **Roll No.** 67 | **Section:** D1P2635
-**Faculty:** Adarsh Singh 
+**Faculty:** Adarsh Singh
 **Current phase:** CA1 – Design & Create (Units I–II)
 
 ---
@@ -21,11 +21,11 @@ In CA1 the system supports the **Create** and **Read** operations on an in-memor
 
 ## 2. Features by Phase
 
-| Phase | Status | Features |
-|---|---|---|
-| **CA1 – Design & Create** | Done | `Tool` class with static, inline and friend members, `this` pointer, `std::string`; array of objects; pointer traversal; Add Tool; View All Tools; validation; no duplicate IDs; capacity check (max 100) |
-| **CA2 – Persist & Search** | Planned | Default, parameterised and copy constructors; destructor; binary fixed-size record file; search with `seekg`; basic update with `seekp`; data survives restart |
-| **CA3 – Reuse & Delete** | Planned | Base class + at least 2 derived classes; operator overloading (`<<`, `>>`, `==`, `<` + one more); type conversion; `new`/`delete`; virtual functions and virtual destructor; safe update and delete with confirmation |
+| Phase                               | Status  | Features                                                                                                                                                                                                                                      |
+| ----------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CA1 – Design & Create**    | Done    | `Tool` class with static, inline and friend members, `this` pointer, `std::string`; array of objects; pointer traversal; Add Tool; View All Tools; validation; no duplicate IDs; capacity check (max 100)                               |
+| **CA2 – Persist & Search**   | Planned | Default, parameterised and copy constructors; destructor; binary fixed-size record file; search with `seekg`; basic update with `seekp`; data survives restart                                                                            |
+| **CA3 – Reuse & Delete**     | Planned | Base class + at least 2 derived classes; operator overloading (`<<`, `>>`, `==`, `<` + one more); type conversion; `new`/`delete`; virtual functions and virtual destructor; safe update and delete with confirmation             |
 | **CA4 – Integrate & Defend** | Planned | Full CRUD menu; `try`/`catch`/`throw` with custom exception class; function and class templates; STL `vector`/`list` with `sort`, `find_if`, `count_if`; at least one advanced feature (backup, CSV export, undo stack, etc.) |
 
 ---
@@ -42,32 +42,34 @@ NEIGHBOURHOOD TOOL-LENDING SYSTEM
 ```
 
 ### Add Tool
+
 Prompts for Tool ID, Name, Category and Type (1 = Hand Tool, 2 = Power Tool).
 
-| Input | Validation |
-|---|---|
-| Tool ID | Not empty; must be unique |
-| Tool Name | Not empty |
-| Category | Not empty |
-| Tool Type | Only `1` or `2` accepted |
-| Storage | Stops with a message when 100 tools are stored |
+| Input     | Validation                                     |
+| --------- | ---------------------------------------------- |
+| Tool ID   | Not empty; must be unique                      |
+| Tool Name | Not empty                                      |
+| Category  | Not empty                                      |
+| Tool Type | Only `1` or `2` accepted                   |
+| Storage   | Stops with a message when 100 tools are stored |
 
 ### View All Tools
+
 Displays every stored tool and the total count. Shows a friendly message if no tools have been added yet.
 
 ### OOP Concepts Used
 
-| Concept | Where |
-|---|---|
-| Encapsulation | Private data members in `Tool` |
-| Default constructor | `Tool()` |
+| Concept                          | Where                                                         |
+| -------------------------------- | ------------------------------------------------------------- |
+| Encapsulation                    | Private data members in `Tool`                              |
+| Default constructor              | `Tool()`                                                    |
 | Static data member and functions | `totalTools`, `increaseTotalTools()`, `getTotalTools()` |
-| Inline function | `getToolID()` |
-| `this` pointer | `setToolDetails()`, `getToolID()` |
-| Friend function | `displayTool()` |
-| Array of objects | `Tool tools[MAX_TOOLS]` |
-| Pointers / pointer arithmetic | `Tool *ptr = tools; *(ptr + i)` in `viewAllTools()` |
-| `std::string` | All text fields and input |
+| Inline function                  | `getToolID()`                                               |
+| `this` pointer                 | `setToolDetails()`, `getToolID()`                         |
+| Friend function                  | `displayTool()`                                             |
+| Array of objects                 | `Tool tools[MAX_TOOLS]`                                     |
+| Pointers / pointer arithmetic    | `Tool *ptr = tools; *(ptr + i)` in `viewAllTools()`       |
+| `std::string`                  | All text fields and input                                     |
 
 ---
 
@@ -132,12 +134,12 @@ Total Number of Tools: 1
 
 ### Sample data for testing
 
-| Tool ID | Name | Category | Type |
-|---|---|---|---|
-| T101 | Hammer | Carpentry | Hand Tool (1) |
-| T102 | Drill | Electrical | Power Tool (2) |
-| T103 | Spanner Set | Plumbing | Hand Tool (1) |
-| T104 | Electric Saw | Carpentry | Power Tool (2) |
+| Tool ID | Name         | Category   | Type           |
+| ------- | ------------ | ---------- | -------------- |
+| T101    | Hammer       | Carpentry  | Hand Tool (1)  |
+| T102    | Drill        | Electrical | Power Tool (2) |
+| T103    | Spanner Set  | Plumbing   | Hand Tool (1)  |
+| T104    | Electric Saw | Carpentry  | Power Tool (2) |
 
 > CA1 stores data in memory only. File-based sample data (`/data`) will be added in CA2.
 
@@ -177,5 +179,15 @@ Submission files follow the naming rule `<RollNo>_CAP455_<Phase>_<Title>`, e.g. 
 - Whitespace-only input is accepted as non-empty.
 - Lending and borrower records are not modelled yet.
 
----
 
+CA2 UPDATE – Persist & Search
+10. What's New in CA2
+File storage: tools are now saved in a binary file (tools.dat), so data is kept after the program exits. The 100-tool array limit is removed.
+New menu options: Search Tool (by ID, using seekg) and Update Tool (using seekp) are added. The menu is now: 1. Add Tool, 2. View All Tools, 3. Search Tool, 4. Update Tool, 5. Exit.
+Constructors and destructor: default, parameterised and copy constructors and a destructor are added to the Tool class.
+Naming validation: Tool ID, name and category must follow simple naming rules (for example, a name must start with a letter and a category cannot contain digits). Extra spaces are trimmed.
+Text report on exit: when the program exits, the binary file is converted into a readable file, tools_data.txt.
+
+Still to come: delete, lending records, inheritance and the other CA3/CA4 features.
+
+---
