@@ -1,8 +1,8 @@
 # Neighbourhood Tool-Lending System
 
 **Course:** CAP455 – Object-Oriented Programming using C++ (MCA, Session 2026–27)
-**Student:** [Your Name] | **Roll No.:** [Your Roll No.] | **Section:** [Section]
-**Faculty:** [Faculty Name]
+**Student:** Prakriti | **Roll No.** 67 | **Section:** D1P2635
+**Faculty:** Adarsh Singh 
 **Current phase:** CA1 – Design & Create (Units I–II)
 
 ---
