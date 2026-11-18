@@ -179,14 +179,19 @@ Submission files follow the naming rule `<RollNo>_CAP455_<Phase>_<Title>`, e.g. 
 - Whitespace-only input is accepted as non-empty.
 - Lending and borrower records are not modelled yet.
 
+CA2 UPDATE – Persist & Search 10. What's New in CA2 File storage: tools are now saved in a binary file (tools.dat), so data is kept after the program exits. The 100-tool array limit is removed. 
 
-CA2 UPDATE – Persist & Search
-10. What's New in CA2
-File storage: tools are now saved in a binary file (tools.dat), so data is kept after the program exits. The 100-tool array limit is removed.
-New menu options: Search Tool (by ID, using seekg) and Update Tool (using seekp) are added. The menu is now: 1. Add Tool, 2. View All Tools, 3. Search Tool, 4. Update Tool, 5. Exit.
-Constructors and destructor: default, parameterised and copy constructors and a destructor are added to the Tool class.
-Naming validation: Tool ID, name and category must follow simple naming rules (for example, a name must start with a letter and a category cannot contain digits). Extra spaces are trimmed.
-Text report on exit: when the program exits, the binary file is converted into a readable file, tools_data.txt.
+New menu options:
+
+ Search Tool (by ID, using seekg) and Update Tool (using seekp) are added.
+
+ The menu is now: 
+
+1. Add Tool
+2. View All Tools
+3. Search Tool
+4. Update Tool
+5. Exit.                                                                                                                                                                   Constructors and destructor: default, parameterised and copy constructors and a destructor are added to the Tool class. Naming validation: Tool ID, name and category must follow simple naming rules (for example, a name must start with a letter and a category cannot contain digits). Extra spaces are trimmed. Text report on exit: when the program exits, the binary file is converted into a readable file, tools_data.txt.
 
 Still to come: delete, lending records, inheritance and the other CA3/CA4 features.
 
